@@ -63,16 +63,16 @@ export class CountryViewComponent implements OnInit {
 
     setTimeout(function(){
       $('#loading-screen').fadeOut(400);
-    }, 8000);
+    },9000);
 
 
-    setTimeout(function(){$('.food-1-container').addClass('animated bounceInLeft'); $('.food-1-container').css('opacity', '1') }, 9000);
+    setTimeout(function(){$('.food-1-container').addClass('animated bounceInLeft'); $('.food-1-container').css('opacity', '1') }, 10000);
 
     setTimeout(function(){ $('.food-2-container').addClass('animated bounceInLeft'); $('.food-2-container').css('opacity', '1')  }, 11000);
 
-    setTimeout(function(){ $('.food-3-container').addClass('animated bounceInLeft');$('.food-3-container').css('opacity', '1')  }, 13000);
+    setTimeout(function(){ $('.food-3-container').addClass('animated bounceInLeft');$('.food-3-container').css('opacity', '1')  }, 12000);
 
-    setTimeout(function(){ $('.goback').addClass('animated bounceIn'); }, 10000);
+    setTimeout(function(){ $('.goback').addClass('animated bounceIn'); }, 13000);
 
 
   }

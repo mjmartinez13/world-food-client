@@ -41,9 +41,13 @@ export class AboutUsComponent implements OnInit {
 
     setTimeout(() => {
       $('.green-text').addClass('animated fadeIn');
-      $('.pink-text').addClass('animated fadeIn');
-      $('.blue-text').addClass('animated fadeIn');
     }, 11000)
+    setTimeout(() => {
+      $('.blue-text').addClass('animated fadeIn');
+    }, 12000)
+    setTimeout(() => {
+      $('.pink-text').addClass('animated fadeIn');
+    }, 13000)
 
   }
 

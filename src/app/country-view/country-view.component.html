@@ -4,7 +4,7 @@
 
 <div id="loading-screen">
   <div class="loading-text-container">
-    <img class="loading-img" src="../assets/img/loading.gif">
+    <img class="loading-img" src="/assets/img/loading.gif">
     <i class="ion-checkmark-circled"></i>
     <h1 class="loading-text">Searching top 3 from <span>{{ country.name}}</span></h1>
   </div>
@@ -14,7 +14,7 @@
   <div class="container">
     <div class="row">
       <h2> {{  country.name }} <span>Top 3 dishes</span> </h2>
-      
+
           <div class="col-sm-4 food-1-container">
               <div class="food-1">
                 <h1 class="heading-number">1</h1>
@@ -25,7 +25,7 @@
 
                   <button class="button" (click)="recipeOne()" name="button"> Recipe </button>
 
-                  <button class="button" (click)="commentOne()" name="button">Comments</button>
+                  <!-- <button class="button" (click)="commentOne()" name="button">Comments</button> -->
 
               </div>
           </div>
@@ -42,7 +42,7 @@
 
                   <button class="button" (click)="recipeTwo()" name="button"> Recipe </button>
 
-                  <button class="button" (click)="commentTwo()" name="button">Comments</button>
+                  <!-- <button class="button" (click)="commentTwo()" name="button">Comments</button> -->
 
               </div>
           </div>
@@ -57,7 +57,7 @@
 
                 <button class="button" (click)="recipeThree()" name="button"> Recipe </button>
 
-                <button class="button" (click)="commentThree()" name="button">Comments</button>
+                <!-- <button class="button" (click)="commentThree()" name="button">Comments</button> -->
 
             </div>
 
@@ -78,25 +78,25 @@
   <br>
   <h3>{{ country.food[0].about }}</h3>
   <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-5">
         <img [src]="country.food[0].image">
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-7">
         <div class="location-container">
-          <img src="../../assets/img/yelp.png">
+          <img src="/assets/img/yelp.png">
           <br>
           <a class="location" [href]="country.food[0].location" target="_blank"><span>Locations for</span><span> {{ country.food[0].name }}</span></a>
         </div>
       </div>
   </div>
   <div class="row">
-    <div class="col-sm-6 recipe-col">
+    <div class="col-sm-5 recipe-col">
       <a class="recipe recipe-btn" [href]="country.food[0].recipe" target="_blank">
         Recipe
       </a>
       <!-- <h4 class="sub-recipe-title">Recipe</h4> -->
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-7">
       <a class="recipe youtube-col" [href]="country.food[0].video" target="_blank">
         Video Recipe
       </a>
@@ -126,25 +126,25 @@
   <br>
   <h3>{{ country.food[1].about }}</h3>
   <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-5">
         <img [src]="country.food[1].image">
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-7">
         <div class="location-container">
-          <img src="../../assets/img/yelp.png">
+          <img src="/assets/img/yelp.png">
           <br>
           <a class="location" [href]="country.food[1].location" target="_blank"><span>Locations for</span><span> {{ country.food[1].name }}</span></a>
         </div>
       </div>
   </div>
   <div class="row">
-    <div class="col-sm-6 recipe-col">
+    <div class="col-sm-5 recipe-col">
       <a class="recipe recipe-btn" [href]="country.food[1].recipe" target="_blank">
         Recipe
       </a>
       <!-- <h4 class="sub-recipe-title">Recipe</h4> -->
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-7">
       <a class="recipe youtube-col" [href]="country.food[1].video" target="_blank">
         Video Recipe
       </a>
@@ -171,25 +171,25 @@
   <br>
   <h3>{{ country.food[2].about }}</h3>
   <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-5">
         <img [src]="country.food[2].image">
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-7">
         <div class="location-container">
-          <img src="../../assets/img/yelp.png">
+          <img src="/assets/img/yelp.png">
           <br>
           <a class="location" [href]="country.food[2].location" target="_blank"><span>Locations for</span><span> {{ country.food[2].name }}</span></a>
         </div>
       </div>
   </div>
   <div class="row">
-    <div class="col-sm-6 recipe-col">
+    <div class="col-sm-5 recipe-col">
       <a class="recipe recipe-btn" [href]="country.food[2].recipe" target="_blank">
         Recipe
       </a>
       <!-- <h4 class="sub-recipe-title">Recipe</h4> -->
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-7">
       <a class="recipe youtube-col" [href]="country.food[2].video" target="_blank">
         Video Recipe
       </a>

@@ -14,6 +14,7 @@ import { CountryService } from './country.service';
 import { CountryViewComponent } from './country-view/country-view.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CountriesComponent } from './countries/countries.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CountriesComponent } from './countries/countries.component';
     HomeComponent,
     CountryViewComponent,
     AboutUsComponent,
-    CountriesComponent
+    CountriesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

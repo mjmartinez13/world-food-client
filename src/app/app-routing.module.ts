@@ -13,6 +13,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 
 import { CountriesComponent } from './countries/countries.component';
 
+import { ContactComponent } from './contact/contact.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -33,6 +35,10 @@ const routes: Routes = [
   {
     path: 'countries',
     component: CountriesComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
   }
 ];
 
