@@ -1,0 +1,212 @@
+<section *ngIf="country">
+
+<div  id="country-container">
+
+<div id="loading-screen">
+  <div class="loading-text-container">
+    <img class="loading-img" src="../assets/img/loading.gif">
+    <i class="ion-checkmark-circled"></i>
+    <h1 class="loading-text">Searching top 3 from <span>{{ country.name}}</span></h1>
+  </div>
+</div>
+
+<a class="goback" routerLink="/map"><i class="ion-reply"></i></a>
+  <div class="container">
+    <div class="row">
+      <h2> {{  country.name }} <span>Top 3 dishes</span> </h2>
+      <hr>
+          <div class="col-sm-4 food-1-container">
+              <div class="food-1">
+                <h1 class="heading-number">1</h1>
+                <img class="food-card-img-1" [src]="country.food[0].image" alt="">
+                <h4> {{ country.food[0].name }} </h4>
+              </div>
+              <div class="features">
+
+                  <button class="button" (click)="recipeOne()" name="button"> Recipe </button>
+
+                  <button class="button" (click)="commentOne()" name="button">Comments</button>
+
+              </div>
+          </div>
+
+
+
+          <div class="col-sm-4 food-2-container">
+              <div class="food-2">
+                <h1 class="heading-number">2</h1>
+                <img class="food-card-img-2" [src]="country.food[1].image" alt="">
+                <h4> {{ country.food[1].name }} </h4>
+              </div>
+              <div class="features">
+
+                  <button class="button" (click)="recipeTwo()" name="button"> Recipe </button>
+
+                  <button class="button" (click)="commentTwo()" name="button">Comments</button>
+
+              </div>
+          </div>
+
+          <div class="col-sm-4 food-3-container">
+            <div class="food-3">
+              <h1 class="heading-number">3</h1>
+              <img class="food-card-img-3" [src]="country.food[2].image" alt="">
+              <h4> {{ country.food[2].name }} </h4>
+            </div>
+            <div class="features">
+
+                <button class="button" (click)="recipeThree()" name="button"> Recipe </button>
+
+                <button class="button" (click)="commentThree()" name="button">Comments</button>
+
+            </div>
+
+          </div>
+
+      </div>
+      </div>
+  </div>
+
+
+<!--    FOOD 1 -->
+
+
+<div class="recipe-container-1 recipe-container">
+  <a class="exit-btn" type="button" (click)="exit()"><i class="ion-close"></i></a>
+
+  <h2 class="food-name"> {{ country.food[0].name }}</h2>
+  <br>
+  <h3>{{ country.food[0].about }}</h3>
+  <div class="row">
+      <div class="col-sm-6">
+        <img [src]="country.food[0].image">
+      </div>
+      <div class="col-sm-6">
+        <div class="location-container">
+          <img src="../../assets/img/yelp.png">
+          <br>
+          <a class="location" [href]="country.food[0].location" target="_blank"><span>Locations for</span><span> {{ country.food[0].name }}</span></a>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 recipe-col">
+      <a class="recipe recipe-btn" [href]="country.food[0].recipe" target="_blank">
+        Recipe
+      </a>
+      <!-- <h4 class="sub-recipe-title">Recipe</h4> -->
+    </div>
+    <div class="col-sm-6">
+      <a class="recipe youtube-col" [href]="country.food[0].video" target="_blank">
+        Video Recipe
+      </a>
+    </div>
+  </div>
+
+</div>
+<!-- comment for food -->
+<div class="comment-container-1 comment-container">
+  <a class="exit-comment" type="button" (click)="exitComment()"><i class="ion-close"></i></a>
+    <h3>Leave a comment about the <span>{{ country.food[0].name }}</span> dish</h3>
+    <hr class="h3-hr">
+    <form action="comment" method="post">
+      <input type="text" name="name">
+      <button class="button" type="submit" name="button">Submit</button>
+    </form>
+    <hr>
+
+</div>
+
+<!-- FOOD 2 -->
+
+<div class="recipe-container-2 recipe-container">
+  <a class="exit-btn" type="button" (click)="exit()"><i class="ion-close"></i></a>
+
+  <h2 class="food-name"> {{ country.food[1].name }}</h2>
+  <br>
+  <h3>{{ country.food[1].about }}</h3>
+  <div class="row">
+      <div class="col-sm-6">
+        <img [src]="country.food[1].image">
+      </div>
+      <div class="col-sm-6">
+        <div class="location-container">
+          <img src="../../assets/img/yelp.png">
+          <br>
+          <a class="location" [href]="country.food[1].location" target="_blank"><span>Locations for</span><span> {{ country.food[1].name }}</span></a>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 recipe-col">
+      <a class="recipe recipe-btn" [href]="country.food[1].recipe" target="_blank">
+        Recipe
+      </a>
+      <!-- <h4 class="sub-recipe-title">Recipe</h4> -->
+    </div>
+    <div class="col-sm-6">
+      <a class="recipe youtube-col" [href]="country.food[1].video" target="_blank">
+        Video Recipe
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="comment-container-2 comment-container">
+  <a class="exit-comment" type="button" (click)="exitComment()"><i class="ion-close"></i></a>
+    <h3>Leave a comment about the <span>{{ country.food[1].name }}</span> dish</h3>
+    <hr class="h3-hr">
+    <form action="comment" method="post">
+      <input type="text" name="name">
+      <button class="button" type="submit" name="button">Submit</button>
+    </form>
+    <hr>
+
+</div>
+<!-- FOOD 3 -->
+<div class="recipe-container-3 recipe-container">
+  <a class="exit-btn" type="button" (click)="exit()"><i class="ion-close"></i></a>
+
+  <h2 class="food-name"> {{ country.food[2].name }}</h2>
+  <br>
+  <h3>{{ country.food[2].about }}</h3>
+  <div class="row">
+      <div class="col-sm-6">
+        <img [src]="country.food[2].image">
+      </div>
+      <div class="col-sm-6">
+        <div class="location-container">
+          <img src="../../assets/img/yelp.png">
+          <br>
+          <a class="location" [href]="country.food[2].location" target="_blank"><span>Locations for</span><span> {{ country.food[2].name }}</span></a>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 recipe-col">
+      <a class="recipe recipe-btn" [href]="country.food[2].recipe" target="_blank">
+        Recipe
+      </a>
+      <!-- <h4 class="sub-recipe-title">Recipe</h4> -->
+    </div>
+    <div class="col-sm-6">
+      <a class="recipe youtube-col" [href]="country.food[2].video" target="_blank">
+        Video Recipe
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="comment-container-3 comment-container">
+  <a class="exit-comment" type="button" (click)="exitComment()"><i class="ion-close"></i></a>
+    <h3>Leave a comment about the <span>{{ country.food[2].name }}</span> dish</h3>
+    <hr class="h3-hr">
+    <form action="comment" method="post">
+      <input type="text" name="name">
+      <button class="button" type="submit" name="button">Submit</button>
+    </form>
+    <hr>
+
+</div>
+
+</section>

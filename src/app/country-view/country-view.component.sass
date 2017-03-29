@@ -1,0 +1,165 @@
+@import "./node_modules/bourbon/app/assets/stylesheets/bourbon.scss"
+
+@import "recipe-container"
+
+#country-container
+  background-image: linear-gradient(rgba(20,20,20, .2),rgba(20,20,20, .2)), url('../../assets/img/view-background.jpg')
+  background-size: cover
+  background-position: bottom center
+  text-align: center
+  height: 100vh
+  width: 100% !important
+  background-size: cover
+  padding: 60px 0
+  text-align: center
+
+  h4
+    font-size: 160%
+    color: #555
+    margin-bottom: 20px
+
+  a
+    float: left
+    cursor: pointer
+    img
+      height: 40px
+      width: 40px
+      transition: all 0.3s ease
+
+
+  h2
+    font-size: 350%
+    color: #fff
+    font-weight: 300
+    span
+      font-weight: 600
+  hr
+    border: 2px solid #fff
+    width: 5%
+    margin-left: 47%
+  h3
+    text-align: center
+    margin-bottom: 20px
+    color: #555
+  .food-card-img-1,.food-card-img-2,.food-card-img-3
+    width: 220px
+    height: 180px
+
+.col-sm-4
+  background: rgba(255,255,255, .8)
+  padding: 20px
+  width: 30.6666667% !important
+  margin: 10px
+  transition: background 0.3s ease
+  overflow: visible !important
+  cursor: pointer
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15)
+  transition: all 0.3s ease-in-out
+  &:hover
+    // box-shadow: 0 5px 15px rgba(0,0,0,0.3)
+
+
+.goback
+  opacity: 0
+  font-size: 320%
+  color: #fff
+  position: relative
+  left: 5%
+  top: 3%
+  transition: all 0.3s ease
+  &:hover
+    transform: scale(1.20)
+
+#country-img
+  z-index: -4
+  position: absolute
+  height: 100vh
+  width: 100%
+  top: 0
+  left: 0
+
+.container
+  width: 80% !important
+
+
+.food-1-container,
+.food-2-container,
+.food-3-container
+  background: #fff
+  opacity: 0
+  border-radius: 2px
+.heading-number
+  font-weight: 600
+  color: shade(#0f9d58, 42%)
+  margin: 0
+  margin-bottom: 20px
+  font-size: 250%
+
+.reviews
+  height: auto
+  background-color: shade($green-color, 10%)
+  color: #fff
+  padding: 10px
+  text-align: center
+
+
+.features
+  button:nth-child(1)
+    margin-right: 10px
+
+.button
+  border: none
+  text-transform: uppercase
+  width: 140px
+  height: 35px
+  line-height: 32px
+  border-radius: 2px
+  font-size: 120%
+  background-color: #0f9d58
+  color: #fff
+  transition: all .3s ease
+  &:hover
+    // background: shade(#0f9d58, 12%)
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3)
+.button:focus
+  outline: none
+.button:active
+  transition-delay: 0s
+
+
+#loading-screen
+  z-index: 999
+  position: absolute
+  top: 0
+  left: 0
+  background: #ecf0f1
+  height: 100%
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  img
+    position: relative
+    left: 29px
+    width: 250px
+  h1
+    color: #555
+    font-weight: 400
+    font-size: 300%
+  span
+    font-weight: 600
+  i
+    opacity: 0
+    // position: relative
+    // right: 135px
+    // top: 27px
+    color: #2ccd71
+    font-size: 570%
+
+  .loading-text-container
+    position: relative
+    bottom: 50px
+
+.loading-text
+  opacity: 0

@@ -1,0 +1,40 @@
+<section id="world-map">
+
+
+
+  <img class="globe" src="assets/img/globe1.png">
+
+
+  <div class="country-list">
+    <div id="map-point" *ngFor="let oneCountry of countries">
+
+      <a class="routerLink" [routerLink]="['country', oneCountry._id]"> {{ oneCountry.name }} <i class="ion-chevron-right"></i> </a>
+
+    </div>
+  </div>
+
+
+  <div class="row">
+      <div class="col-sm-4" style="padding: 0">
+
+        </div>
+          <div class="col-sm-7 right-side">
+              <div class="map-text">
+                <h3>Choose any country you want...</h3>
+                <h1> Famous <span>dishes from</span></h1>
+                <div class="rw-words">
+                  <span>U.S.A</span>
+                  <span>Venezuela</span>
+                  <span>Cuba</span>
+                  <span>Puerto Rico</span>
+                </div>
+                <p class="lead">Discover different foods from all over the world. You can pick from the <b>map</b> or you can click <b>random</b> and it will choose a random dish from a country</p>
+
+              </div>
+
+        </div>
+
+    </div>
+<img class="grass"src="http://pngimg.com/uploads/grass/grass_PNG10865.png" alt="">
+</section>
+<!-- http://pngimg.com/uploads/grass/grass_PNG401.png -->

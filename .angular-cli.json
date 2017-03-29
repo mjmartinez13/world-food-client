@@ -19,9 +19,18 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.sass"
+        "styles.sass",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/bourbon/app/assets/stylesheets/_bourbon.scss",
+        "../node_modules/vegas/dist/vegas.min.css",
+        "../node_modules/animate.css/animate.min.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../node_modules/vegas/dist/vegas.min.js",
+        "../node_modules/angular-youtube-embed/dist/angular-youtube-embed.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

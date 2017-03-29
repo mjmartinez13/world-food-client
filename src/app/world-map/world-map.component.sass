@@ -1,0 +1,174 @@
+@import "./node_modules/bourbon/app/assets/stylesheets/bourbon.scss"
+
+$pink-color: #f87a86
+$blue-color: #23cbff
+$green-color: #82bd48
+
+
+
+#world-map
+  background: url('../../assets/img/country-background.jpg')
+  background-position: center center
+  height: 100vh
+  background-size: cover
+
+.globe
+  opacity: 0
+  position: absolute !important
+  top: 28%
+  left: 20%
+  transform: translateX(-50%) translateY(-50%)
+  width: 500px
+  animation-duration: 3s
+  animation-iteration-count: 1
+
+
+.grass
+  opacity: 0
+  position: absolute
+  top: 85%
+  left: 0%
+  height: 200px
+  width: 100%
+  animation-duration: 3s
+
+.us-point
+  position: absolute
+  top: 40% !important
+  left: 23% !important
+  transform: translateX(-50%) translateY(-50%)
+
+.side-container
+  text-align: center
+  margin-top: 80px
+
+  h2
+    margin-bottom: 50px
+  img
+    height: 240px
+    width: 270px
+    transition: all .2s ease
+    &:hover
+      transform: scale(1.15)
+
+.col-sm-6
+  margin-bottom: 50px
+
+
+
+
+.right-side
+  height: 100vh
+
+.map-text
+  opacity: 0
+  margin-left: 50px !important
+  position: absolute
+  top: 15%
+  left: 27%
+  transform: translateX(-50%), translateY(-50%)
+
+  h3
+    font-size: 300%
+    font-weight: lighter
+  h1
+    font-size: 500%
+    text-transform: uppercase
+    color: #4d4d4d
+    margin-bottom: 90px
+    span
+      text-transform: none
+      font-weight: 300
+  p
+    color: #4d4d4d
+.rw-words
+  display: inline-block
+
+  span
+    color: #fff
+    font-weight: 300
+    text-align: left
+    font-size: 630%
+    position: absolute
+    top: 40%
+    left: 0%
+    opacity: 0
+    overflow: hidden
+    width: auto
+    animation: rotateWordsFirst 12s linear infinite 0s
+    &:nth-child(2)
+      animation-delay: 3s
+    &:nth-child(3)
+      animation-delay: 6s
+    &:nth-child(4)
+      animation-delay: 9s
+
+
+@keyframes rotateWordsFirst
+  0%
+    opacity: 1
+    animation-timing-function: ease-in
+    height: 0px
+  8%
+    opacity: 1
+    height: 100px
+  19%
+    opacity: 1
+    height: 100px
+  25%
+    opacity: 0
+    height: 100px
+  100%
+    opacity: 0
+
+
+.row
+  width: 100% !important
+
+.country-list
+  border-radius: 2px
+  z-index: 999 !important
+  position: absolute
+  top: 18%
+  left: 0%
+  transform: translateX(-50%), translateY(-50%)
+  background: $green-color
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3)
+  a
+    display: block
+    padding: 15px 50px
+    font-size: 150%
+    transition: all .4s ease
+    color: #fff
+    &:hover
+      text-decoration: none
+      background-color: shade($green-color, 10%)
+
+  #map-point
+    text-align: center
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      left: 45%
+      bottom: 100%
+      width: 0
+      height: 0
+      border-bottom: 20px solid $green-color
+      border-top: 20px solid transparent
+      border-left: 20px solid transparent
+      border-right: 20px solid transparent
+
+.routerLink
+  transition: all .3s ease
+  &:hover
+
+    i
+      opacity: 1
+
+  i
+    transition: all 0.3s ease
+    opacity: 0
+    position: relative
+    top: 2px
+    left: 10px
