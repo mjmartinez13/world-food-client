@@ -32,25 +32,45 @@ export class CountryViewComponent implements OnInit {
 
     setTimeout(function(){
       $('.loading-text').addClass('animated fadeIn');
-      $('.loading-text').css('opacity', '1');
+    }, 1000);
+
+    setTimeout(function(){
+      $('.loading-text').removeClass('animated fadeIn');
+      $('.loading-text').addClass('animated fadeOut');
     }, 2000);
 
     setTimeout(function(){
-      $('.loading-text-container i').css('opacity', '1');
-      $('.loading-img').fadeOut(200);
+      $('.loading-text').removeClass('animated fadeOut');
+      $('.loading-text').addClass('animated fadeIn');
+    }, 3000);
+
+
+    setTimeout(function(){
+      $('.loading-text').removeClass('animated fadeIn');
+      $('.loading-text').addClass('animated fadeOut');
+    }, 4000);
+
+    setTimeout(function(){
+      $('.loading-text').removeClass('animated fadeOut');
+      $('.loading-text').addClass('animated fadeIn');
     }, 5000);
+
+    setTimeout(function(){
+      $('.loading-text-container i').addClass('animated fadeIn')
+      $('.loading-img').fadeOut(200);
+    }, 7000);
 
 
     setTimeout(function(){
       $('#loading-screen').fadeOut(400);
-    }, 6000);
+    }, 8000);
 
 
-    setTimeout(function(){$('.food-1-container').addClass('animated bounceInLeft'); $('.food-1-container').css('opacity', '1') }, 6000);
+    setTimeout(function(){$('.food-1-container').addClass('animated bounceInLeft'); $('.food-1-container').css('opacity', '1') }, 9000);
 
-    setTimeout(function(){ $('.food-2-container').addClass('animated bounceInLeft'); $('.food-2-container').css('opacity', '1')  }, 8000);
+    setTimeout(function(){ $('.food-2-container').addClass('animated bounceInLeft'); $('.food-2-container').css('opacity', '1')  }, 11000);
 
-    setTimeout(function(){ $('.food-3-container').addClass('animated bounceInLeft');$('.food-3-container').css('opacity', '1')  }, 10000);
+    setTimeout(function(){ $('.food-3-container').addClass('animated bounceInLeft');$('.food-3-container').css('opacity', '1')  }, 13000);
 
     setTimeout(function(){ $('.goback').addClass('animated bounceIn'); }, 10000);
 
