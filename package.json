@@ -27,6 +27,7 @@
     "core-js": "^2.4.1",
     "jquery": "^3.2.1",
     "rxjs": "^5.1.0",
+    "vegas-js": "^1.0.5",
     "zone.js": "^0.7.6"
   },
   "devDependencies": {
